@@ -5,6 +5,7 @@
 //-------------------------------------------------------------------------
 
 using System;
+using Full_GRASP_And_SOLID;
 using System.Collections.Generic;
 using System.Linq;
 
@@ -20,7 +21,8 @@ namespace Full_GRASP_And_SOLID
         {
             PopulateCatalogs();
 
-            Recipe recipe = new Recipe();
+            IRecipe recipe;
+            recipe = new Recipe();
             recipe.FinalProduct = GetProduct("Café con leche");
             recipe.AddStep(GetProduct("Café"), 100, GetEquipment("Cafetera"), 120);
             recipe.AddStep(GetProduct("Leche"), 200, GetEquipment("Hervidor"), 60);
